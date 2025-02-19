@@ -30,6 +30,11 @@ export default function Project({
     setIsExpanded((prev) => !prev);
   };
 
+  const handleClick=()=>{
+    window.open(link, "_blank");
+  }
+
+
   return (
     <motion.div
       ref={ref}
@@ -37,7 +42,8 @@ export default function Project({
         scale: scaleProgress,
         opacity: opacityProgress,
       }}
-      className="group mb-3 sm:mb-8 last:mb-0"
+      className="group mb-3 sm:mb-8 last:mb-0 cursor-pointer"
+      onClick={handleClick}
     >
       <motion.section
         initial={{ height: "20rem" }}
